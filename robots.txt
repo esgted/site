@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+Disallow: /cgi-bin/
+Sitemap: https://esgtedarik.com.tr/bizeulasin.html
+Sitemap: https://esgtedarik.com.tr/hakkimizda.html
