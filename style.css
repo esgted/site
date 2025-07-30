@@ -1,0 +1,391 @@
+@font-face {
+    font-family: Roboto-Flex;
+    src: url(fonts/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: Open-sans;
+    src: url(fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+     display: flex;
+  flex-direction: column;
+  
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    background-color: white;
+    box-shadow: 1px 1px 4px;
+    top: 0;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    transition: height 0.25s ease, box-shadow 0.25s ease;
+    z-index: 1000;
+}
+
+header.shrink {
+    height: 80px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+#navbar {
+    display: flex;
+    gap: 100px;
+    transition: gap 0.25s ease;
+    border: 2px solid;
+    padding: 12px 20px;
+    border-radius: 35px;
+    box-shadow: 1px 1px 2px;
+    background-color: rgb(250, 248, 248);
+}
+
+#navbar a {
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+    text-shadow: 1px 6px 10px #8d8d8d;
+}
+
+#navbar p {
+    font-family: Roboto-Flex;
+    font-size: larger;
+}
+
+header.shrink #navbar {
+    gap: 20px;
+        padding: 1px 15px;
+        margin-top: -20px;
+}
+
+#anasayfa::before, #hakkımızda::before, #bizeulasin::before {
+    vertical-align: middle;
+    position: relative;
+    margin-top: -4px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#anasayfa::before {
+    background-image: url(icons/anasayfa.svg);
+}
+
+#hakkımızda::before {
+    background-image: url(icons/hakkımızda.png);
+}
+
+#bizeulasin::before {
+    background-image: url(icons/bizeulasin.png);
+}
+
+#anasayfa:hover, #hakkımızda:hover, #bizeulasin:hover {
+    color: rgb(101, 101, 207);
+}
+
+#logo {
+    width: 25vw;
+    max-width: 400px;
+    margin-top: -50px;
+    transition: width 0.25s ease, margin-top 0.25s ease, transform 0.5s ease;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+header.shrink #logo {
+    width: 150px;
+    margin-top: -15px;
+}
+
+footer {
+    background-color: white;
+    padding: 20px 0;
+    font-family: Open-sans;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    position: relative;
+    box-shadow: 1px -1px 4px;
+}
+
+footer p {
+    margin: 1px 0;
+    text-shadow: 1px 6px 10px #c2c0c0;
+}
+
+.slider {
+    margin: 20px auto;
+    border: 2px solid #333;
+    width: 80%;
+    max-width: 1400px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: 456px;
+    max-height: 900px;
+    position: relative;
+
+}
+.slides{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%;
+    height: 100%;
+}
+.slides img {
+    width: 50%;
+    height: 100%; 
+    object-fit: fill; 
+    object-position: center;
+    
+}
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 50%;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+.slider-btn:hover{
+    color:rgb(4, 0, 255);
+    background-color: rgb(175, 174, 174);
+}
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+.box {
+    border: 2px solid #333;
+    height: 1000px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1400px;
+}
+#bilgi {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #f0f0f0;
+}
+
+.bilgi-wrapper {
+  position: relative;
+  width: 90%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  height: 500px;
+}
+
+.bilgi-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.bilgi-overlay {
+  position: absolute;
+  top:1%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6); /* siyah ve yarı saydam */
+  color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.bilgi-overlay h2 {
+  margin: 0 0 20px;
+  font-size: 1.8rem;
+  font-family: Roboto-Flex, sans-serif;
+}
+
+.bilgi-btn {
+  display: inline-block;
+  background-color: #017FB2;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.bilgi-btn:hover {
+  background-color: #015f85;
+}
+.kategori-container {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 40px 0;
+}
+
+.kategori-kutu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.kategori-kutu:hover {
+  transform: translateY(-5px);
+}
+.kategori-kutu {
+  position: relative; /* ::after için gerekli */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.kategori-kutu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 6px;
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 242, 254, 0.5);
+  
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.kategori-kutu:hover::after {
+  opacity: 1;
+}
+
+.kategori-container img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.kategori-container h3 {
+     margin: 15px 0;
+  font-family: Roboto-Flex;
+  text-align: center;
+  border: 3px solid ; /* İstersen renk değiştir */
+  padding-bottom: 8px;
+  padding: 10px 80px;
+  border-radius: 10px;
+  position: relative;
+}
+
+
+
+
+
+/* Mobil uyumlu yapı */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        position: static;
+    }
+
+    #logo {
+        margin-top: 0;
+        width: 60vw;
+        position:relative;
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .slider {
+        height: 115px;
+    }
+
+    .box {
+        height: auto;
+    }
+
+    #navbar p {
+        font-size: 1rem;
+    }
+
+   .bilgi-overlay {
+    position: absolute; /* absolute kalacak */
+    top: 10px;          /* üstten biraz boşluk */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;         /* genişliği biraz küçülttük */
+    padding: 15px 10px;
+    font-size: 0.85rem;
+    max-height: 50%;    /* yüksekliği sınırlayalım */
+    overflow-y: auto;   /* taşarsa scroll çıksın */
+  }
+  
+  .bilgi-wrapper {
+    position: relative; /* overlay için referans */
+    height: auto;       /* yüksekliği esnek yap */
+  }
+
+
+  .bilgi-overlay h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .bilgi-btn {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    margin-top: 10px;
+  }
+  .slider-btn {
+    font-size: 2rem;    /* buton içindeki simge boyutu küçüldü */
+    padding: 3px 8px;     /* butonun iç dolgusunu küçült */
+  }
+}
+

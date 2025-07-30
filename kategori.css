@@ -1,0 +1,115 @@
+.urunler-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 40px 0;
+}
+
+.urun-karti {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  font-family: Roboto-Flex;
+}
+
+.urun-karti:hover {
+  transform: translateY(-5px);
+}
+
+.urun-karti::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 6px;
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 242, 254, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.urun-karti:hover::after {
+  opacity: 1;
+}
+
+.urun-karti img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.urun-karti h3 {
+  margin: 15px 0 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  border: 3px solid;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.urun-karti p {
+  margin-bottom: 15px;
+  font-family: Open-sans;
+}
+.urunler-box {
+  border: 2px solid #333;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1400px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.nescafe img,
+.aykur-ay img,
+.coffee-mate img,
+.cif-temizlik-rnleri img,
+.domestos-temizlik-rnleri img,
+.pril-temizlik-rnleri img,
+.abc-temizlik-rnleri img,
+.kat-havlu img,
+.tuvalet-kad img,
+.izelta-rnleri img,
+.makina-takm-rnleri img,
+.bosch-rnleri img,
+.gedik-kaynak-rnleri img,
+.fotoselli-havlu-katlar img,
+.iten-ekmeli-havlu img,
+.z-kat-havlu img,
+.mini-jumbo-tuvalet-kad img,
+.dispenser-peeteler img,
+.peeteler img,
+.rulo-havlu-katlar img,
+.edding-kalemler img,
+.faber-castell img,
+.panda-pano-yaz-tahtas img,
+.fullflex-eldiven-rnleri img,
+.balkp-kp-eker img{
+        object-fit: scale-down;
+}
+
+@media (max-width: 768px) {
+  .urunler-box {
+    padding: 20px 10px;
+  }
+
+  .urun-karti {
+    width: 90%;
+  }
+}
